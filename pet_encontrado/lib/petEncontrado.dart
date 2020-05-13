@@ -8,15 +8,20 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+      BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Pet encontrado"),
+          title: Text(
+              "Pet encontrado"
+          ),
           centerTitle: true,
           backgroundColor: Colors.blueAccent,
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.keyboard_backspace),
+              icon: Icon(
+                  Icons.keyboard_backspace
+              ),
               onPressed: () {},
             )
           ],
@@ -29,12 +34,21 @@ class _HomeState extends State<Home> {
             children: <Widget>[
               CarouselWithIndicatorDemo(),
               Padding (
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(
+                    8.0
+                ),
                 child:
                 Align(
                   child:
-                  Text ("Pet encontrado 10/05 as 18:00",
-                    style: TextStyle(color: Colors.black45, fontSize: 20.0, fontWeight: FontWeight.bold),
+                  Text (
+                    "Pet encontrado 10/05 as 18:00",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
+                      letterSpacing: 0.5,
+                    ),
                   ),
                   alignment: Alignment.center,
                 ),
@@ -44,19 +58,34 @@ class _HomeState extends State<Home> {
                 child:
                 Align(
                   child:
-                  Text ("Quem achou: Anderson Luis Ribeiro",
-                    style: TextStyle(color: Colors.black45, fontSize: 20.0, fontWeight: FontWeight.bold),
+                  Text (
+                    "Quem achou: Anderson Luis Ribeiro",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
+                      letterSpacing: 0.5,
+                    ),
                   ),
                   alignment: Alignment.center,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 80.0),
+                padding: const EdgeInsets.only(
+                    top: 80.0
+                ),
                 child:
                 Align(
                   child:
                   Text ("Este Pet é Seu?",
-                    style: TextStyle(color: Colors.black45, fontSize: 25.0, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
+                      letterSpacing: 0.0,
+                    ),
                   ),
                   alignment: Alignment.center,
                 ),
@@ -66,29 +95,41 @@ class _HomeState extends State<Home> {
                 children: <Widget>[
                   FlatButton.icon(
                     icon: Icon(
-                        Icons.arrow_back
+                        Icons.arrow_back_ios
                     ),
                     label: Text('Não',
-                      style: TextStyle(color: Colors.white, fontSize: 25.0),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        fontFamily: 'Roboto',
+                        letterSpacing: 1.0,
+                      ),
                     ),
 
                     color: Colors.blueAccent,
                     onPressed: () {},
+                      shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(8.0))
 
                   ),
                   FlatButton.icon(
                     icon: Icon(
-                        Icons.pin_drop
+                        Icons.location_on
                     ),
                     label: Text('Sim',
-                      style: TextStyle(color: Colors.white, fontSize: 25.0),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontFamily: 'Roboto',
+                        letterSpacing: 1.0,
+                      ),
                     ),
 
                     color: Colors.blueAccent,
                     onPressed: () {},
+                      shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(8.0))
                   ),
                 ],
-                alignment: MainAxisAlignment.center,
+                alignment: MainAxisAlignment.spaceEvenly,
                 mainAxisSize: MainAxisSize.max,
               )
             ],
