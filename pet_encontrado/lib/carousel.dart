@@ -28,7 +28,15 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
               options: CarouselOptions(
                   autoPlay: true,
                   enlargeCenterPage: false,
-                  aspectRatio: 1.3,
+                  height: 325,
+                  viewportFraction: 1.2,
+                  initialPage: 0,
+                  enableInfiniteScroll: true,
+                  reverse: false,
+                  autoPlayInterval: Duration(seconds: 5),
+                  autoPlayAnimationDuration: Duration(milliseconds: 1600),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  scrollDirection: Axis.horizontal,
 
                   onPageChanged: (index, reason) {
                     setState(() {
@@ -42,9 +50,9 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
               children: imgList.map((url) {
                 int index = imgList.indexOf(url);
                 return Container(
-                  width: 8.0,
-                  height: 8.0,
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                  width: 5.0,
+                  height: 5.0,
+                  margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 2.0),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: _current == index
@@ -61,12 +69,12 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
 
 final List<Widget> imageSliders = imgList.map((item) => Container(
   child: Container(
-    margin: EdgeInsets.all(5.0),
+    margin: EdgeInsets.all(0.0),
     child: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(5.0)),
         child: Stack(
           children: <Widget>[
-            Image.network(item,  fit: BoxFit.cover, width: 1000),
+            Image.network(item,  fit: BoxFit.cover, width: 380),
             Positioned(
               bottom: 0.0,
               left: 0.0,
@@ -79,10 +87,10 @@ final List<Widget> imageSliders = imgList.map((item) => Container(
                       Color.fromARGB(0, 0, 0, 0)
                     ],
                     begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
+                    end: Alignment.center,
                   ),
                 ),
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
               ),
             ),
           ],

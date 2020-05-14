@@ -1,6 +1,7 @@
 import 'carousel.dart';
 import 'package:flutter/material.dart';
 
+
 class Home extends StatefulWidget {
   @override
     _HomeState createState() => _HomeState();
@@ -11,24 +12,10 @@ class _HomeState extends State<Home> {
   Widget build(
       BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-              "Pet encontrado"
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.blueAccent,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                  Icons.keyboard_backspace
-              ),
-              onPressed: () {},
-            )
-          ],
-        ),
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
-          padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
+          padding: EdgeInsets.fromLTRB(
+              10.0, 10.0, 10.0, 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -73,7 +60,7 @@ class _HomeState extends State<Home> {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 80.0
+                    top: 150.0
                 ),
                 child:
                 Align(
@@ -124,12 +111,12 @@ class _HomeState extends State<Home> {
                       ),
                     ),
 
-                    color: Colors.blueAccent,
+                      color: Colors.blueAccent,
                     onPressed: () {},
                       shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(8.0))
                   ),
                 ],
-                alignment: MainAxisAlignment.spaceEvenly,
+                alignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
               )
             ],
