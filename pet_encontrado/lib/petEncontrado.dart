@@ -61,7 +61,7 @@ class _HomeState extends State<Home> {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 90.0
+                    top: 100.0
                 ),
                 child:
                 Align(
