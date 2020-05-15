@@ -4,8 +4,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 final List<String> imgList = [
   'https://cdn.pixabay.com/photo/2014/03/14/20/13/dog-287420_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2015/11/17/13/13/dogue-de-bordeaux-1047521_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2015/06/08/15/02/pug-801826_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2018/05/25/11/15/black-3428861_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2018/11/30/08/47/cat-3847296_960_720.jpg',
 ];
 
 
@@ -29,7 +29,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
                   autoPlay: true,
                   enlargeCenterPage: false,
                   height: 325,
-                  viewportFraction: 1.2,
+                  viewportFraction: 1.0,
                   initialPage: 0,
                   enableInfiniteScroll: true,
                   reverse: false,
@@ -75,24 +75,6 @@ final List<Widget> imageSliders = imgList.map((item) => Container(
         child: Stack(
           children: <Widget>[
             Image.network(item,  fit: BoxFit.cover, width: 380),
-            Positioned(
-              bottom: 0.0,
-              left: 0.0,
-              right: 0.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Color.fromARGB(200, 0, 0, 0),
-                      Color.fromARGB(0, 0, 0, 0)
-                    ],
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.center,
-                  ),
-                ),
-                padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
-              ),
-            ),
           ],
         )
     ),

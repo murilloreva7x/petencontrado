@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import 'carousel.dart';
 import 'package:flutter/material.dart';
 
@@ -15,14 +17,13 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           padding: EdgeInsets.fromLTRB(
-              10.0, 10.0, 10.0, 0.0),
+              8.0, 25.0, 8.0, 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               CarouselWithIndicatorDemo(),
               Padding (
-                padding: const EdgeInsets.all(
-                    8.0
+                padding: const EdgeInsets.all(10.0
                 ),
                 child:
                 Align(
@@ -31,17 +32,17 @@ class _HomeState extends State<Home> {
                     "Pet encontrado 10/05 as 18:00",
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20.0,
+                        fontSize: 18.0,
                         fontWeight: FontWeight.bold,
                       fontFamily: 'Roboto',
                       letterSpacing: 0.5,
                     ),
                   ),
-                  alignment: Alignment.center,
+                  alignment: Alignment.bottomLeft,
                 ),
               ),
               Padding (
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child:
                 Align(
                   child:
@@ -49,13 +50,13 @@ class _HomeState extends State<Home> {
                     "Quem achou: Anderson Luis Ribeiro",
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20.0,
+                        fontSize: 18.0,
                         fontWeight: FontWeight.bold,
                       fontFamily: 'Roboto',
                       letterSpacing: 0.5,
                     ),
                   ),
-                  alignment: Alignment.center,
+                  alignment: Alignment.bottomLeft,
                 ),
               ),
               Padding(
@@ -68,7 +69,7 @@ class _HomeState extends State<Home> {
                   Text ("Este Pet é Seu?",
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 25.0,
+                        fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       fontFamily: 'Roboto',
                       letterSpacing: 0.0,
@@ -87,7 +88,7 @@ class _HomeState extends State<Home> {
                     label: Text('Não',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20.0,
+                          fontSize: 14.0,
                         fontFamily: 'Roboto',
                         letterSpacing: 1.0,
                       ),
@@ -105,7 +106,7 @@ class _HomeState extends State<Home> {
                     label: Text('Sim',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20.0,
+                        fontSize: 14.0,
                         fontFamily: 'Roboto',
                         letterSpacing: 1.0,
                       ),
@@ -116,6 +117,10 @@ class _HomeState extends State<Home> {
                       shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(8.0))
                   ),
                 ],
+                buttonHeight: 36.0,
+                buttonMinWidth: 113.0,
+                buttonPadding: EdgeInsets.all(5.0),
+
                 alignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
               )
