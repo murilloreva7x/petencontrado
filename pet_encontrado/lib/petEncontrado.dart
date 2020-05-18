@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
-
 import 'carousel.dart';
 import 'package:flutter/material.dart';
-
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -56,27 +55,37 @@ class _HomeState extends State<Home> {
                       letterSpacing: 0.5,
                     ),
                   ),
+
                   alignment: Alignment.bottomLeft,
                 ),
               ),
-              Row(
+              Padding (
+                padding: const EdgeInsets.all(40.0),
+                child:
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: const <Widget>[
                       Icon(
-                        Icons.add_call,
-                        color: Colors.grey,
+                        MdiIcons.whatsapp,
+                        color: Colors.lightGreen,
                         size: 50.0,
                       ),
                       Icon(
-                        Icons.message,
-                        color: Colors.grey,
+                        Icons.call,
+                        color: Colors.blueAccent,
                         size: 56.0,
                       ),
+                      Icon(
+                        Icons.email,
+                        color: Colors.red,
+                        size: 50.0,
+                      )
                     ],
                   ),
+              ),
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 100.0
+                    top: 2.0
                 ),
                 child:
                 Align(
@@ -144,3 +153,5 @@ class _HomeState extends State<Home> {
         ));
   }
 }
+
+
