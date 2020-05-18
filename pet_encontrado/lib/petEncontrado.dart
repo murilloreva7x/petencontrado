@@ -60,20 +60,20 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Padding (
-                padding: const EdgeInsets.all(40.0),
+                padding: const EdgeInsets.all(20.0),
                 child:
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: const <Widget>[
                       Icon(
                         MdiIcons.whatsapp,
-                        color: Colors.lightGreen,
+                        color: Colors.green,
                         size: 50.0,
                       ),
                       Icon(
                         Icons.call,
                         color: Colors.blueAccent,
-                        size: 56.0,
+                        size: 50.0,
                       ),
                       Icon(
                         Icons.email,
