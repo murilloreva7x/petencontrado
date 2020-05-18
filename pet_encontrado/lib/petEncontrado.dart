@@ -59,6 +59,21 @@ class _HomeState extends State<Home> {
                   alignment: Alignment.bottomLeft,
                 ),
               ),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: const <Widget>[
+                      Icon(
+                        Icons.add_call,
+                        color: Colors.grey,
+                        size: 50.0,
+                      ),
+                      Icon(
+                        Icons.message,
+                        color: Colors.grey,
+                        size: 56.0,
+                      ),
+                    ],
+                  ),
               Padding(
                 padding: const EdgeInsets.only(
                     top: 100.0
