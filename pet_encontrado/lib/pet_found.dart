@@ -3,12 +3,12 @@ import 'carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class Home extends StatefulWidget {
+class PetFound extends StatefulWidget {
   @override
-    _HomeState createState() => _HomeState();
+    _PetFoundState createState() => _PetFoundState();
 }
 
-class _HomeState extends State<Home> {
+class _PetFoundState extends State<PetFound> {
   @override
   Widget build(
       BuildContext context) {
